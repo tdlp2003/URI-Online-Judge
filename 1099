@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int soma , i, d, e;
+
+        int casos = sc.nextInt();
+
+        for (i = 0; i < casos; ++i)
+        {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            soma = 0;
+
+            if(x < y)
+            {
+                for (d = x + 1; d < y; ++d)
+                {
+                    if(d % 2 != 0)
+                        soma += d;
+
+                }
+            }
+            else
+            {
+                for(e = y + 1; e < x; ++e )
+                    if(e % 2 != 0)
+                    soma += e;
+            }
+            System.out.println(soma);
+        }
+        
+    }
+}
