@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b,c,d,e;
+
+        b = a / 365;
+
+        System.out.printf(b+ " ano(s)" );
+
+        c = a % 365;
+        d = c / 30;
+
+        System.out.println("\n" +d+ " mes(es)");
+
+        e = c % 30;
+
+        System.out.println(e+ " dia(s)");
+
+    }
+
+}
