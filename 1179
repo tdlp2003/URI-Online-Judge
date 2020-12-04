@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int par[] = new int[5];
+        int impar[] = new int[5];
+
+        int a = 0, b = 0, d;
+
+        for(int i = 0;i < 15;i++){
+            d = sc.nextInt();
+            if(d % 2 == 0){
+                par[b] = d;
+                b++;
+            }
+
+            else{
+                impar[a] = d;
+                a++;
+            }
+            if(b == 5)
+            {
+                for(int x = 0;x < 5;x++)
+                {
+                    System.out.println("par["+ x +"] = "+ par[x]);
+                }
+                b = 0;
+                par = new int[5];
+            }
+            if(a == 5){
+
+                for(int x = 0;x < 5;x++){
+                    System.out.println("impar["+ x +"] = "+ impar[x]);
+                }
+                a = 0;
+                impar = new int[5];
+            }
+
+        }
+
+        for(int i = 0;i < impar.length;i++){
+
+
+            if(impar[i]!= 0){
+                System.out.println("impar["+ i +"] = "+ impar[i]);
+            }}
+        for(int i = 0;i< par.length;i++){
+            if(par[i]!= 0){
+                System.out.println("par["+ i +"] = "+ par[i]);
+            }}
+    }}
