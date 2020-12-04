@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+      Scanner sc = new Scanner(System.in);
+      int t, i;
+      String s,r;
+
+      t = sc.nextInt();
+      for(i = 0; i < t; i++)
+      {
+           s = sc.next();
+           r = sc.next();
+          System.out.printf("Caso #%d: ", (i+1));
+
+
+      if(s.equals(r))
+          System.out.println("De novo!");
+      else
+          if(s.equals("tesoura") && r.equals("papel") || s.equals("tesoura") && r.equals("lagarto"))
+              System.out.println("Bazinga!");
+
+          else
+          if(s.equals("papel") && r.equals("pedra") || s.equals("papel") && r.equals("Spock"))
+              System.out.println("Bazinga!");
+          else
+          if(s.equals("pedra") && r.equals("lagarto") || s.equals("pedra") && r.equals("tesoura"))
+              System.out.println("Bazinga!");
+          else
+          if(s.equals("lagarto") && r.equals("Spock") || s.equals("lagarto") && r.equals("papel"))
+              System.out.println("Bazinga!");
+          else
+          if(s.equals("Spock") && r.equals("tesoura") || s.equals("Spock") && r.equals("pedra"))
+              System.out.println("Bazinga!");
+          else
+              System.out.println("Raj trapaceou!");
+    }
+    }
+}
