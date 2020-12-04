@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, c, maior1, maior2;
+
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+
+
+        maior1 = (a + b + Math.abs(a - b)) / 2;
+
+        maior2 = (c + maior1 + Math.abs(c - maior1)) / 2;
+
+        System.out.println(maior2 + " eh o maior");
+    }
+}
