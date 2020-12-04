@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String d;
+        float a = 0;
+        d = sc.nextLine();
+        float [][] matriz = new float[12][12];
+
+        for (int i = 0;i < 12; i++) {
+            for (int j = 0;j < 12; j++) {
+                matriz [j][i] = sc.nextFloat();
+            }
+        }
+        if (d.equals("S")){
+            for (int i = 0;i < 12; i++){
+                for (int j = 0;j < i; j++){
+                    a = a + matriz [i][j];
+                    System.out.printf("%.1f\n", matriz[i][j]);
+                }
+            }
+            System.out.printf("%.1f\n",a);
+        }
+        if(d.equals("M")){
+            for (int i = 0; i< 12; i++){
+                for (int j = 0 ;j < i; j++){
+                    a = a + matriz [i][j];
+                }
+            }
+            a = a/66;
+            System.out.printf("%.1f\n",a);
+        }
+    }
+}
